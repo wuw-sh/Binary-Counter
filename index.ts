@@ -1,4 +1,4 @@
-const bit = 8
+const bit = 8 //input value of bit here
 
 function convertToBin(num: number){
   let arr = [num];
