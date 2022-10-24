@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../index.ts"],
+  "sourcesContent": ["const bit = 8\n\nfunction convertToBin(num: number){\n  let arr = [num];\n  while(num / 2 != 0) {\n    num = Math.floor(num / 2);\n    arr.push(num);\n  }\n  arr.pop();\n  arr.reverse();\n  let binaryDigs = arr.map(x => x % 2 == 0 ? 0: 1);\n  return Number(binaryDigs.join(''))\n}\nfor (let i = 0; i < 2 ** bit; i++) {\n  if (i === 0 || i === 1) {\n    console.log(\"0\".repeat(bit - 1) + convertToBin(i))\n    continue\n  }\n  console.log(\"0\".repeat(bit - convertToBin(i).toString().length) + convertToBin(i))\n}"],
+  "mappings": "AAAA,MAAM,MAAM;AAEZ,sBAAsB,KAAY;AAChC,MAAI,MAAM,CAAC;AACX,SAAM,MAAM,KAAK,GAAG;AAClB,UAAM,KAAK,MAAM,MAAM;AACvB,QAAI,KAAK;AAAA;AAEX,MAAI;AACJ,MAAI;AACJ,MAAI,aAAa,IAAI,IAAI,OAAK,IAAI,KAAK,IAAI,IAAG;AAC9C,SAAO,OAAO,WAAW,KAAK;AAAA;AAEhC,SAAS,IAAI,GAAG,IAAI,KAAK,KAAK,KAAK;AACjC,MAAI,MAAM,KAAK,MAAM,GAAG;AACtB,YAAQ,IAAI,IAAI,OAAO,MAAM,KAAK,aAAa;AAC/C;AAAA;AAEF,UAAQ,IAAI,IAAI,OAAO,MAAM,aAAa,GAAG,WAAW,UAAU,aAAa;AAAA;",
+  "names": []
+}
